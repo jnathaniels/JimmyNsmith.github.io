@@ -10,6 +10,8 @@
         
     <input type="button" id='btn' value="CIT Majors">
     <input type="button" id='btn' value="Business Majors">
+	
+	<p>We filter our dataset by major</p>
              
  	<div id="result"></div>
     
@@ -20,7 +22,7 @@
     	document.querySelector('#btn').onclick = function(){   // attach to button
 
         	var request = new XMLHttpRequest();
-        	request.open('GET', 'exam_scores.json');
+        	request.open('GET', 'cit5students.json');
 
         	request.onload = function(){
 
