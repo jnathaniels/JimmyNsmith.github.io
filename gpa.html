@@ -28,7 +28,7 @@
        <p><input type='text' ng-model='search_text' > Enter Search text</p>
        <table class="table table-bordered table-striped">
            <tr>
-             <th>sid</th> <th>first name</th> <th>last name</th> <th>gpa points</th>
+             <th>sid</th> <th>first name</th> <th>last name</th> <th>gpa points</th> <th>calculated gpa</th>
            </tr>
   
            <tr ng-repeat = "students in students | filter:search_text">
@@ -36,6 +36,7 @@
                <td>{{students.first_name}}</td>
                <td>{{students.last_name}}</td>
                <td>{{students.gpa_points}}</td>
+               <td>{{(student.gpa_points / student.credit_hrs).toFixed(1)}}</td>
            </tr>
        </table>
      </div>
